@@ -12,7 +12,7 @@ USER root
 # TODO pin version
 RUN sed -i -e 's/http:/https:/' /etc/apk/repositories && \
     apk update && \
-    apk add 'pgbouncer' 'jq' 'postgresql-client' 'tini' --no-cache
+    apk add 'pgbouncer' 'jq' 'postgresql-client' 'tini' 'envsubst' --no-cache
 
 RUN mkdir /var/secrets/ -p
 RUN cd /bin/ && \

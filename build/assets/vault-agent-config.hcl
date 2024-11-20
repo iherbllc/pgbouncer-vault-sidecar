@@ -1,9 +1,9 @@
 exit_after_auth = true
 auto_auth {
     method "kubernetes" {
-        mount_path = "auth/kubernetes"
+        mount_path = "$AUTH_MOUNT"
         config = {
-            role = "__ROLE__"
+            role = "$VAULT_KUBERNETES_ROLE"
         }
     }
 
